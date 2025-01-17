@@ -1,11 +1,12 @@
 # Expense Tracker
 
 ![](images/screenshot.png)
-
+---
 ## Description
 
 The Expense Tracker is a simple GUI application designed to help users manage and track their expenses. Built with Python's Tkinter library, it provides a user-friendly interface for adding, editing, and deleting expenses, as well as visualizing category summaries and total expenditures.
 
+---
 ## Features
 
 - **Add Expenses**: Quickly input your expenses with date, category, and amount.
@@ -18,11 +19,13 @@ The Expense Tracker is a simple GUI application designed to help users manage an
 
 ![](images/record.gif)
 
+---
 ## Requirements
 
 - Python 3.x
 - Tkinter (comes pre-installed with Python)
 - `tkcalendar` library for date selection
+---
 ### Installation
 
 1. **Navigate to the project directory**:
@@ -36,7 +39,7 @@ The Expense Tracker is a simple GUI application designed to help users manage an
    ```bash
    pip install tkcalendar
    ```
-
+---
 ## Usage
 
 1. Run the application:
@@ -48,7 +51,7 @@ The Expense Tracker is a simple GUI application designed to help users manage an
 2. Use the interface to add, edit, or delete your expenses.
 
 3. Expenses are saved in a CSV file named `finances.csv` in the project directory.
-
+---
 ## Example of Categories
 
 The application comes with predefined categories for easier tracking. Here are some examples:
@@ -63,11 +66,12 @@ The application comes with predefined categories for easier tracking. Here are s
 - Entertainment: Movies
 - Education: Tuition
 - Savings: Emergency
-
+---
 ## Contributing
 
 Contributions are welcome!
 
+---
 ## Acknowledgments
 
 Thank you to the developers of Python, Tkinter, and the `tkcalendar` library for making this project possible.
