@@ -248,7 +248,7 @@ total_label = tk.Label(root, text="Total Expenses: $0.00")  # Label for total ex
 total_label.grid(row=3, column=0, columnspan=9, padx=5, pady=5)  # Place label in the grid
 
 # Create a text box for displaying category totals and averages
-summary_text = tk.Text(root, height=10, width=30)  # Text box for category summary
+summary_text = tk.Text(root, height=10, width=30)
 summary_text.grid(row=4, column=0, columnspan=9, padx=5, pady=5, sticky='nsew')  # Place text box in the grid
 summary_text.config(state=tk.NORMAL)  # Allow editing (optional)
 summary_text.insert(tk.END, "Category Summary:\n--------------------\n")  # Insert initial text
@@ -261,5 +261,4 @@ root.grid_columnconfigure(9, weight=0)  # Scrollbar does not need to resize
 
 view_expenses()  # Load expenses when the application starts
 
-# Run the application
 root.mainloop()
