@@ -1,10 +1,10 @@
-import os  # Module for interacting with the operating system
-import csv  # Module for reading and writing CSV files
-import tkinter as tk  # Tkinter module for creating the GUI
-from tkinter import ttk  # Module for themed widgets
-from tkcalendar import DateEntry  # Widget for date selection
-from datetime import datetime  # Module for date and time manipulations
-from collections import defaultdict  # For category totals
+import os
+import csv
+import tkinter as tk
+from tkinter import ttk
+from tkcalendar import DateEntry
+from datetime import datetime
+from collections import defaultdict
 
 # Global variable to track the sort order of the columns in the treeview
 sort_order = {
@@ -21,9 +21,9 @@ def validate_amount_input(P):
     """ Validate the input for the amount entry field.
     Allow empty input, integers, or floats with one decimal point. """
     if P == "" or P.isdigit() or (P.count('.') < 2 and P.replace('.', '').isdigit()):
-        return True  # Valid input
+        return True
     else:
-        return False  # Invalid input
+        return False
 
 def add_expense():
     """ Add a new expense to the CSV file and refresh the displayed list. """
@@ -81,21 +81,21 @@ def edit_expense():
 
 def update_expense(old_date, old_category):
     """ Update the expense with new values. """
-    date = date_entry.get()  # Get new date
-    category = category_combobox.get()  # Get new category
-    amount = amount_entry.get()  # Get new amount
+    date = date_entry.get()
+    category = category_combobox.get()
+    amount = amount_entry.get()
 
     if date and category and amount:
         with open("finances.csv", "r") as file:
-            lines = file.readlines()  # Read all lines in the CSV
+            lines = file.readlines()
 
         with open("finances.csv", "w", newline="") as file:
             for line in lines:
-                if line.startswith(f"{old_date},{old_category}"):  # Match old entry
+                if line.startswith(f"{old_date},{old_category}"):
                     writer = csv.writer(file)
-                    writer.writerow([date, category, amount])  # Write updated values
+                    writer.writerow([date, category, amount])
                 else:
-                    file.write(line)  # Write back the remaining lines
+                    file.write(line)
 
         status_label.config(text="Expense updated successfully!", fg="green")  # Update status
         clear_entries()  # Clear the input fields
