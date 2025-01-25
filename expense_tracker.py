@@ -15,7 +15,7 @@ sort_order = {
 
 # Create a dictionary to hold category totals and averages
 category_totals = defaultdict(float)  # Total amount per category
-category_counts = defaultdict(int)      # Count of expenses per category
+category_counts = defaultdict(int)    # Count of expenses per category
 
 def validate_amount_input(P):
     """ Validate the input for the amount entry field.
